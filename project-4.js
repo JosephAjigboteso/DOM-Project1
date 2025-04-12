@@ -54,7 +54,7 @@ function stopWatch(){
 
 startStopBtn.addEventListener('click', function(){
     if(timerStatus === "stopped"){
-        timeInterval = window.setInterval(stopWatch, 10);
+        timeInterval = window.setInterval(stopWatch, 1000);
         startStopBtn.innerHTML = '<i class= "fa-solid fa-pause" id="pause"></i>';
         timerStatus = "started";
     }else{
@@ -70,5 +70,6 @@ resetBtn.addEventListener('click', function(){
     minutes = 0;
     hours = 0;
     document.getElementById('timer').innerText = "00:00:00";
-    
+    timerStatus = "stopped";
+    startStopBtn.innerHTML = '<i class= "fa-solid fa-play" id="play"></i>';
 });
